@@ -1,0 +1,36 @@
+{
+  "name": "proximacare-test-automation",
+  "version": "1.0.0",
+  "description": "Standalone Playwright End-to-End Test Automation Suite for ProximaCare Ecosystem with Excel Test Data & Screen Capture Reporting",
+  "main": "playwright.config.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:auth": "playwright test e2e/01_customer_auth.spec.js --headed",
+    "test:booking": "playwright test e2e/02_customer_booking.spec.js --headed",
+    "test:payment": "playwright test e2e/03_customer_payment.spec.js --headed",
+    "test:orders": "playwright test e2e/04_customer_orders_profile.spec.js --headed",
+    "test:agent": "playwright test e2e/05_agent_portal.spec.js --headed",
+    "test:sales": "playwright test e2e/06_sales_portal.spec.js --headed",
+    "test:board": "playwright test e2e/07_board_portal.spec.js --headed",
+    "test:admin": "playwright test e2e/08_admin_portal.spec.js --headed",
+    "test:support": "playwright test e2e/09_tracking_and_support.spec.js --headed",
+    "testdata:generate": "node test-data/generateDefaultData.js"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "e2e",
+    "exceljs",
+    "proximacare",
+    "screen-capture"
+  ],
+  "author": "ProximaCare QA Team",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0"
+  }
+}
